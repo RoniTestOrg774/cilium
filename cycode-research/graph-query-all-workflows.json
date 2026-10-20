@@ -1,0 +1,631 @@
+{
+ "query": {
+  "connections": [],
+  "exists": true,
+  "is_optional": false,
+  "resource_type": "github_action_workflow_file",
+  "edge_type": "",
+  "filters": [
+   {
+    "mode": "Or",
+    "filters": [
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/ariane-scheduled.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/auto-approve.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/auto-labeler-v1.18.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/auto-labeler-v1.19.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/auto-labeler-v1.20.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/auto-labeler.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-go-caches.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-base-renovate.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-base-v1.18.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-base-v1.19.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-base-v1.20.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-base.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-beta.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-ci-v1.18.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-ci-v1.19.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-ci-v1.20.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-ci.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-docs-builder-v1.18.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-docs-builder-v1.19.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-docs-builder-v1.20.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-docs-builder.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/build-images-releases.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/call-backport-label-updater-v1.18.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/call-backport-label-updater-v1.19.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/call-backport-label-updater-v1.20.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/call-backport-label-updater.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/ci-images-cache-cleaner.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/ci-images-garbage-collect.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/cilium-cli.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/close-stale-issues.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/codeql.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/common-post-jobs.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-aks.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-aws-cni.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-clustermesh.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-delegated-ipam.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-eks.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-gateway-api.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-ginkgo.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-gke.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-ingress.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-ipsec-e2e.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-ipsec.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-k8s-network-policies.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-kind-proxy-embedded.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-kpr-aks.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-kpr-eks.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-kpr-gke.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-kubespray.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-l3-l4.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-l7.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-mcs-api.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-multi-pool.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-race.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-runtime.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/conformance-ztunnel-e2e.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/documentation.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/eks-cluster-delete.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/eks-cluster-pool-manager.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/feature-summary-report.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/fqdn-perf.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/greetings.yml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/hubble-cli-integration-test.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/integration-test.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/k8s-kind-network-e2e.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/k8s-kind-network-policies-e2e.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/l7-perf.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/lint-ariane-config.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/lint-bpf-checks.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/lint-build-commits.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/lint-codeowners.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/lint-go.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/lint-images-base.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/lint-workflows.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/needs-more-info.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/net-perf-gke.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/push-chart-ci.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/release.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/renovate-config-validator.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/renovate.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/reusable-greetings.yml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/scale-cleanup-kops.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/scale-test-100-gce.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/scale-test-5-gce.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/scale-test-clustermesh.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/scale-test-egw.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/scale-test-node-throughput-gce.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/tests-ces-migrate.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/tests-cifuzz.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/tests-clustermesh-upgrade.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/tests-datapath-verifier.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/tests-e2e-upgrade.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/tests-smoke-conformance.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/tests-smoke-ipv6.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/tests-smoke.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/update-label-backport-pr.yaml",
+      "type": "String"
+     },
+     {
+      "name": "metadata.file_name",
+      "operator": "Eq",
+      "value": ".github/workflows/wait-for-status-check.yaml",
+      "type": "String"
+     }
+    ]
+   }
+  ],
+  "variables": [],
+  "edge_filters": [],
+  "edge_columns": [],
+  "parent_resource_type": "",
+  "sort_by": "_key",
+  "sort_order": "Asc",
+  "limit": -1
+ },
+ "output_fields": {
+  "columns": [
+   {
+    "value": "provider",
+    "label": "Provider",
+    "type": "String"
+   },
+   {
+    "value": "metadata.file_name",
+    "label": "File Name",
+    "type": "String"
+   },
+   {
+    "value": "type",
+    "label": "Type",
+    "type": "String"
+   },
+   {
+    "value": "payload.jobs",
+    "label": "Jobs",
+    "type": "Object"
+   }
+  ],
+  "edge_columns": [],
+  "connections": []
+ }
+}
