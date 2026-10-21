@@ -1,0 +1,30 @@
+patterns:
+  - pattern: |
+      $MATCH.Regex = $USERSTRING
+    filters:
+      - variable: USERSTRING
+        detection: k8s_namespaced_resource_field
+
+metadata:
+  id: unescaped_string_into_envoy_route_match
+  name: User-controlled string used in Envoy route match construction without escaping
+  description: >
+    Fields that a namespace user controls, such as an HTTPRoute path or header
+    match value, sometimes get placed directly into an Envoy SafeRegex, path
+    prefix, or header match structure. If that string is not passed through
+    something like regexp.QuoteMeta or an equivalent normalization step first,
+    a crafted value can change the shape of the match rather than just its
+    content, for example turning an intended exact match into a broad one that
+    reaches routes or backends the user should not be able to reach. This rule
+    flags an assignment into a route match field from a value that traces back
+    to a user-controlled resource field, without an escaping call in between.
+  remediation_message: >
+    Escape or validate any user-controlled string before it is used to build a
+    regex, path prefix, or header match in generated Envoy config. Prefer exact
+    match construction over regex construction where the source value is not
+    already a trusted, bounded enum.
+  languages:
+    - go
+  severity: high
+  cwe:
+    - "1333"

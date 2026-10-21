@@ -1,0 +1,29 @@
+patterns:
+  - pattern: |
+      $MSG.Answer[$INDEX]
+    filters:
+      - variable: MSG
+        detection: dns_msg_type
+
+metadata:
+  id: dns_msg_index_without_length_check
+  name: DNS message field indexed or sliced without a prior length check
+  description: >
+    The DNS proxy parses responses from DNS servers that a pod can be made to
+    query, including servers an attacker controls by having a pod resolve an
+    attacker-owned domain. Indexing or slicing into a parsed DNS message
+    (Question, Answer, Extra, and similar fields) without first checking the
+    slice length can panic on a short or malformed response. If that panic
+    happens on a goroutine without a recover, it can crash the proxy or, in the
+    standalone DNS proxy case, take down DNS resolution for everything behind
+    it. This rule flags an index or slice operation on a DNS message field that
+    is not preceded by a length check in the same function.
+  remediation_message: >
+    Check the length of the relevant DNS message field before indexing or
+    slicing it, and confirm the calling goroutine has a recover in place so a
+    malformed response degrades gracefully instead of crashing the process.
+  languages:
+    - go
+  severity: medium
+  cwe:
+    - "20"

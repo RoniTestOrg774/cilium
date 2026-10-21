@@ -1,0 +1,30 @@
+patterns:
+  - pattern: |
+      $MSG.Answer
+    filters:
+      - variable: MSG
+        detection: dns_msg_type
+
+metadata:
+  id: ipv6_parity_in_dns_handling
+  name: DNS or policy code handles IPv4 addresses without a matching IPv6 path
+  description: >
+    A record (IPv4) and AAAA record (IPv6) answers carry the same kind of
+    information, a resolved address, but they are different Go types and often
+    get handled by separate code paths. A common bug class is a path that
+    validates, rate limits, or enforces FQDN policy correctly for A records but
+    has no equivalent check for AAAA records, or applies a weaker one. On a
+    dual-stack cluster this lets an attacker get the same effective access by
+    using IPv6 instead of IPv4. This rule flags a function that branches on or
+    reads A-record data without also handling AAAA records, so the pair can be
+    checked by hand for parity.
+  remediation_message: >
+    For any check applied to a resolved IPv4 address (policy enforcement, rate
+    limiting, map sizing, logging), confirm the same check exists and behaves
+    the same way for the IPv6 equivalent. Prefer a shared code path keyed on a
+    parsed net.IP over separate A/AAAA branches where possible.
+  languages:
+    - go
+  severity: medium
+  cwe:
+    - "697"
