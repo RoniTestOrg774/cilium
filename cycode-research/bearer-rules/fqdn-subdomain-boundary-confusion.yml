@@ -1,0 +1,30 @@
+patterns:
+  - pattern: |
+      strings.HasSuffix($NAME, $POLICY_PATTERN)
+    filters:
+      - variable: NAME
+        detection: dns_name_string
+
+metadata:
+  id: fqdn_subdomain_boundary_confusion
+  name: FQDN policy match uses suffix or substring check without a label boundary
+  description: >
+    A policy written for "example.com" should match "api.example.com" but not
+    "evilexample.com" or "example.com.attacker.net". A plain HasSuffix or
+    Contains check on the raw string gets this wrong in both directions, it can
+    let a domain through that only happens to share trailing characters with
+    the allowed pattern, or it can miss the attacker appending the allowed
+    domain as a prefix of their own. The correct check needs a label boundary,
+    either the strings are equal, or the character immediately before the
+    suffix match is a literal dot. This rule flags a suffix or substring check
+    on a DNS name that does not also check for that boundary.
+  remediation_message: >
+    Match FQDN policy patterns on label boundaries, not raw substrings. Confirm
+    equality, or confirm the suffix match is preceded by a literal dot, and
+    reject matches where the attacker-controlled name has simply had the
+    allowed domain appended to it.
+  languages:
+    - go
+  severity: high
+  cwe:
+    - "290"

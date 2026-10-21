@@ -1,0 +1,30 @@
+patterns:
+  - pattern: |
+      $NAME == $POLICY_PATTERN
+    filters:
+      - variable: NAME
+        detection: dns_name_string
+
+metadata:
+  id: fqdn_case_sensitive_match
+  name: Domain name compared for FQDN policy without case normalization
+  description: >
+    DNS names are case-insensitive by spec, a server can answer a query for
+    "Example.COM" and it is the same name as "example.com". If Cilium's FQDN
+    policy matching compares a response name to a policy pattern with a plain,
+    case-sensitive string comparison instead of normalizing both sides first
+    (for example with strings.ToLower, or using a library that already treats
+    DNS names as case-insensitive), an attacker-controlled authoritative server
+    can return a name with mixed case to slip past a match that was only ever
+    tested with lowercase names. This rule flags a direct equality or Contains
+    check on a DNS name variable without a normalization call in the same
+    function.
+  remediation_message: >
+    Normalize both the response name and the policy pattern to a single case
+    before comparing them, and confirm this happens on every code path that
+    performs FQDN policy matching, not just the common one.
+  languages:
+    - go
+  severity: medium
+  cwe:
+    - "178"
