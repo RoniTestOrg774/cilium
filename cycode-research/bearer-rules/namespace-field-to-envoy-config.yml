@@ -1,0 +1,31 @@
+patterns:
+  - pattern: |
+      $RESOURCE.Spec.<ANY>
+    filters:
+      - variable: RESOURCE
+        detection: k8s_namespaced_resource
+
+metadata:
+  id: namespace_field_to_envoy_config_no_check
+  name: Namespaced resource field reaches Envoy config construction without a namespace check
+  description: >
+    A namespace-scoped Kubernetes resource (HTTPRoute, Ingress, Service, or their
+    annotations) is only visible to the namespace that created it from the
+    Kubernetes RBAC side, but once Cilium reads its fields to build Envoy
+    configuration (cluster names, header matches, route prefixes, Secret
+    references), that trust boundary has to be re-enforced in code, since Envoy
+    config can apply cluster wide. This rule flags a field read from one of these
+    resource types that is used to build Envoy config without a visible check
+    that ties the result back to the resource's own namespace first. A hit does
+    not mean the path is exploitable, it means the data flow exists and the
+    namespace check needs to be confirmed by hand.
+  remediation_message: >
+    Before using a namespace-scoped field to construct shared Envoy state,
+    confirm the operation is scoped to the resource's own namespace, for example
+    by checking that a referenced Service or Secret lives in the same namespace
+    as the HTTPRoute or Ingress that names it.
+  languages:
+    - go
+  severity: high
+  cwe:
+    - "863"
